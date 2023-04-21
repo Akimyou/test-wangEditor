@@ -3,6 +3,12 @@
     <el-form-item label="InputDemo">
       <InputDemo v-model="form.inputDemoValue" />
     </el-form-item>
+    <el-form-item label="InputDemo2">
+      <InputDemo v-model="form.inputDemoValue2" />
+    </el-form-item>
+    <el-form-item label="InputDemo3">
+      <InputDemo v-model="form.inputDemoValue3" />
+    </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="onSubmit">Create</el-button>
       <el-button>Cancel</el-button>
@@ -16,7 +22,9 @@ import InputDemo from './components/InputDemo.vue'
 
 // do not use same name with ref
 const form = reactive({
-  inputDemoValue: ''
+  inputDemoValue: 'inputDemoValue',
+  inputDemoValue2: 'inputDemoValue2',
+  inputDemoValue3: 'inputDemoValue3',
 })
 
 const onSubmit = () => {
