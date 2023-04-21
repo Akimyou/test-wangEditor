@@ -1,9 +1,3 @@
-<!-- 
-  使用 vue3 和 element-plus 实现一个组件
-  该组件有一个 Input 和 一个编辑按钮，点击编辑按钮弹出一个弹窗
-  弹窗中有一个 Textarea 可以输入内容，弹窗点击确定按钮可以将 Textarea 的回填到 Input 上
- -->
-
 <template>
   <div>
     <el-row>
@@ -58,7 +52,7 @@ const handleConfirm = () => {
 const handleOpenEditor = async () => {
   dialogVisible.value = true
   await nextTick()
-  editorCpRef.value.editor.setHtml(props.modelValue)
+  editorCpRef.value.valueHtml = props.modelValue
 }
 </script>
 

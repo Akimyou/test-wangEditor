@@ -24,20 +24,16 @@ import { onBeforeUnmount, ref, shallowRef, onMounted } from "vue";
 import { Editor, Toolbar } from "@wangeditor/editor-for-vue";
 
 export default {
+  props: {
+    value: String
+  },
   components: { Editor, Toolbar},
   setup() {
     // 编辑器实例，必须用 shallowRef
     const editorRef = shallowRef();
 
-    // // 内容 HTML
-    // const valueHtml = ref("<p>hello</p>");
-
-    // // 模拟 ajax 异步获取内容
-    // onMounted(() => {
-    //   setTimeout(() => {
-    //     valueHtml.value = "<p>模拟 Ajax 异步设置内容</p>";
-    //   }, 1500);
-    // });
+    // 内容 HTML
+    const valueHtml = ref("");
 
     const toolbarConfig = {};
     const editorConfig = { placeholder: "请输入内容..." };

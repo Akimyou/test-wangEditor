@@ -16,7 +16,7 @@ import InputDemo from './components/InputDemo.vue'
 
 // do not use same name with ref
 const form = reactive({
-  inputDemoValue: 'xxx'
+  inputDemoValue: ''
 })
 
 const onSubmit = () => {
